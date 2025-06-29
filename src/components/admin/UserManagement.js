@@ -152,7 +152,8 @@ const UserManagement = () => {
 
       {error && <div className="error-message">{error}</div>}
       
-      <div className="search-container">
+      <div cla      }
+ssName="search-container">
         <input
           type="text"
           placeholder="Search users by name, partner, or location..."
