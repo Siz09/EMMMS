@@ -20,7 +20,7 @@ const VenueBooking = () => {
           className="venue-hero-background"
         />
         <div className="venue-hero-content">
-          <h1 className="venue-hero-title">We are <Company Name></Company Name></h1>
+          <h1 className="venue-hero-title">We are Our Company</h1>
           <div className="venue-hero-tagline">
             <p className="venue-hero-text-primary">We bring</p>
             <p className="venue-hero-text-highlight">dream weddings</p>

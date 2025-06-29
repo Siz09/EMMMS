@@ -92,6 +92,7 @@ const VenueAddTest = () => {
   return (
     <form onSubmit={handleSubmit}>
       <h2>Add New Venue</h2>
+      {apiError && <div style={{ color: 'red', marginBottom: '10px' }}>{apiError}</div>}
       {Object.keys(formData).map((field) => (
         <div key={field}>
           <label htmlFor={field}>{field.replace(/([A-Z])/g, ' $1').toUpperCase()}:</label>
@@ -103,10 +104,11 @@ const VenueAddTest = () => {
             onChange={handleChange}
           />
           {errors[field] && <span style={{ color: 'red' }}>{errors[field]}</span>}
-          }
         </div>
       ))}
-      <button type="submit">Add Venue</button>
+      <button type="submit" disabled={isSubmitting}>
+        {isSubmitting ? 'Adding...' : 'Add Venue'}
+      </button>
     </form>
   );
 };
