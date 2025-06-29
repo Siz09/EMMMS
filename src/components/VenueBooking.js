@@ -1,11 +1,8 @@
 "use client"
 
-import { useState } from "react"
 import "../styles/venue-booking.css"
-import PaymentPage from "./PaymentPage"
 import "../styles/modern-components.css"
 import Header from "./Header"
-import Footer from "./Footer"
 
 const VenueBooking = () => {
   // [Previous code remains the same until the return statement]
