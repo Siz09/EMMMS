@@ -95,7 +95,7 @@ const VenueAddTest = () => {
       if (setIsSubmitting) setIsSubmitting(false);
     }
   }
-};
+ };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -111,6 +111,7 @@ const VenueAddTest = () => {
             onChange={handleChange}
           />
           {errors[field] && <span style={{ color: 'red' }}>{errors[field]}</span>}
+          }
         </div>
       ))}
       <button type="submit">Add Venue</button>

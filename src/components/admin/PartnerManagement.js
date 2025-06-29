@@ -142,6 +142,7 @@ const PartnerManagement = () => {
                     <button className={activeTab === 'Pending' ? 'active' : ''} onClick={() => setActiveTab('Pending')}>
                         Pending 
                         {pendingCount > 0 && <span className="pending-count">{pendingCount}</span>}
+                        }
                     </button>
                 </div>
                 {activeTab === 'Pending' ? (
