@@ -114,7 +114,9 @@ const AddUsers = () => {
       </div>
       
       {apiError && <div className="alert alert-error">{apiError}</div>}
+      }
       {successMessage && <div className="alert alert-success">{successMessage}</div>}
+      }
       
       <div className="add-user-form-card">
         <div className="form-header">
@@ -147,6 +149,7 @@ const AddUsers = () => {
               className={errors.fullname ? 'error' : ''}
             />
             {errors.fullname && <span className="error-message">{errors.fullname}</span>}
+            }
           </div>
          
           <div className="form-group">
@@ -160,6 +163,7 @@ const AddUsers = () => {
               className={errors.email ? 'error' : ''}
             />
             {errors.email && <span className="error-message">{errors.email}</span>}
+            }
           </div>
          
           <div className="form-group">
@@ -173,6 +177,7 @@ const AddUsers = () => {
               className={errors.phoneNumber ? 'error' : ''}
             />
             {errors.phoneNumber && <span className="error-message">{errors.phoneNumber}</span>}
+            }
           </div>
          
           {userType === 'Partner' && (
@@ -192,6 +197,7 @@ const AddUsers = () => {
                         className={errors.company ? 'error' : ''}
                     />
                     {errors.company && <span className="error-message">{errors.company}</span>}
+                    }
                 </div>
                 <div className="form-group">
                     <label htmlFor="businessRegistrationNumber">Business Registration Number</label>
@@ -204,6 +210,7 @@ const AddUsers = () => {
                         className={errors.businessRegistrationNumber ? 'error' : ''}
                     />
                     {errors.businessRegistrationNumber && <span className="error-message">{errors.businessRegistrationNumber}</span>}
+                    }
                 </div>
                 <div className="form-group">
                     <label htmlFor="businessAddress">Business Address</label>
@@ -216,6 +223,7 @@ const AddUsers = () => {
                         className={errors.businessAddress ? 'error' : ''}
                     />
                     {errors.businessAddress && <span className="error-message">{errors.businessAddress}</span>}
+                    }
                 </div>
                 <div className="form-group">
                     <label htmlFor="panCardImage">PAN Card Image</label>
@@ -226,6 +234,7 @@ const AddUsers = () => {
                         className={errors.panCardImage ? 'error' : ''}
                     />
                     {errors.panCardImage && <span className="error-message">{errors.panCardImage}</span>}
+                    }
                 </div>
                 <div className="form-group">
                     <label htmlFor="businessDocument">Document of Business</label>
@@ -236,6 +245,7 @@ const AddUsers = () => {
                         className={errors.businessDocument ? 'error' : ''}
                     />
                     {errors.businessDocument && <span className="error-message">{errors.businessDocument}</span>}
+                    }
                 </div>
             </div>
           )}
@@ -252,6 +262,7 @@ const AddUsers = () => {
                 className={errors.password ? 'error' : ''}
               />
               {errors.password && <span className="error-message">{errors.password}</span>}
+              }
             </div>
 
             
@@ -266,6 +277,7 @@ const AddUsers = () => {
                 className={errors.confirmPassword ? 'error' : ''}
               />
               {errors.confirmPassword && <span className="error-message">{errors.confirmPassword}</span>}
+              }
             </div>
 
           </div>
