@@ -124,12 +124,6 @@ const VenueBooking = () => {
     return timeString
   }
 
-  const calculateTotalPrice = () => {
-    const pricePerHour = 15000
-    const duration = Number.parseInt(bookingData.duration) || 2
-    return pricePerHour * duration
-  }
-
   const getAvailableTimeSlots = (selectedDate) => {
     if (!selectedDate) return []
     return (
@@ -283,26 +277,6 @@ const VenueBooking = () => {
     return maxDate.toISOString().split("T")[0]
   }
 
-  const isDateUnavailable = (dateString) => {
-    return bookedDates.includes(dateString) || blackoutDates.includes(dateString)
-  }
-
-  const getDateStatus = (dateString) => {
-    if (bookedDates.includes(dateString)) return "booked"
-    if (blackoutDates.includes(dateString)) return "blackout"
-
-    const date = new Date(dateString)
-    const today = new Date()
-    const minAdvanceDate = new Date()
-    minAdvanceDate.setDate(today.getDate() + 3)
-
-    if (date < today) return "past"
-    if (date < minAdvanceDate) return "too-soon"
-    if (date.getDay() === 1) return "restricted" // Monday
-
-    return "available"
-  }
-
   const handleProceedToPayment = () => {
     setShowPayment(true)
   }
@@ -382,7 +356,7 @@ const VenueBooking = () => {
           className="venue-hero-background"
         />
         <div className="venue-hero-content">
-          <h1 className="venue-hero-title">We are &lt;Company Name&gt;</h1>
+          <h1 className="venue-hero-title">We are <Company Name></h1>
           <div className="venue-hero-tagline">
             <p className="venue-hero-text-primary">We bring</p>
             <p className="venue-hero-text-highlight">dream weddings</p>

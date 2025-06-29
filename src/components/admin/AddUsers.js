@@ -92,9 +92,9 @@ const AddUsers = () => {
       setPanCardImage(null);
       setBusinessDocument(null);
       const panCardInput = document.getElementById('panCardImage');
-const businessDocInput = document.getElementById('businessDocument');
-if (panCardInput) panCardInput.value = null;
-if (businessDocInput) businessDocInput.value = null;
+      const businessDocInput = document.getElementById('businessDocument');
+      if (panCardInput) panCardInput.value = null;
+      if (businessDocInput) businessDocInput.value = null;
 
       
       console.log('User created:', response);
@@ -114,11 +114,9 @@ if (businessDocInput) businessDocInput.value = null;
       </div>
       
       {apiError && <div className="alert alert-error">{apiError}</div>}
-      {successMess      }
-age && <div className="alert alert-success">{successMessage}</div>}
+      {successMessage && <div className="alert alert-success">{successMessage}</div>}
       
-      <div       }
-className="add-user-form-card">
+      <div className="add-user-form-card">
         <div className="form-header">
           <h2>User Information</h2>
           <p>Enter the details for the new user account</p>
@@ -146,11 +144,10 @@ className="add-user-form-card">
               placeholder="Enter full name"
               value={fullname}
               onChange={(e) => setFullName(e.target.value)}
-              className={errors.fullName ? 'error' : ''}
+              className={errors.fullname ? 'error' : ''}
             />
-            {errors.fullName && <span className="error-message">{errors.fullName}</span>}
+            {errors.fullname && <span className="error-message">{errors.fullname}</span>}
           </div>
-             }
          
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
@@ -164,7 +161,6 @@ className="add-user-form-card">
             />
             {errors.email && <span className="error-message">{errors.email}</span>}
           </div>
-             }
          
           <div className="form-group">
             <label htmlFor="phone">Phone Number</label>
@@ -174,11 +170,10 @@ className="add-user-form-card">
               placeholder="Enter phone number"
               value={phoneNumber}
               onChange={(e) => setPhone(e.target.value)}
-              className={errors.phone ? 'error' : ''}
+              className={errors.phoneNumber ? 'error' : ''}
             />
-            {errors.phone && <span className="error-message">{errors.phone}</span>}
+            {errors.phoneNumber && <span className="error-message">{errors.phoneNumber}</span>}
           </div>
-             }
          
           {userType === 'Partner' && (
             <div className="partner-info-section">
@@ -194,11 +189,10 @@ className="add-user-form-card">
                         placeholder="Enter business name"
                         value={company}
                         onChange={(e) => setBusinessName(e.target.value)}
-                        className={errors.businessName ? 'error' : ''}
+                        className={errors.company ? 'error' : ''}
                     />
-                    {errors.businessName && <span className="error-message">{errors.businessName}</span>}
-                </                    }
-div>
+                    {errors.company && <span className="error-message">{errors.company}</span>}
+                </div>
                 <div className="form-group">
                     <label htmlFor="businessRegistrationNumber">Business Registration Number</label>
                     <input
@@ -210,8 +204,7 @@ div>
                         className={errors.businessRegistrationNumber ? 'error' : ''}
                     />
                     {errors.businessRegistrationNumber && <span className="error-message">{errors.businessRegistrationNumber}</span>}
-                </                    }
-div>
+                </div>
                 <div className="form-group">
                     <label htmlFor="businessAddress">Business Address</label>
                     <input
@@ -223,8 +216,7 @@ div>
                         className={errors.businessAddress ? 'error' : ''}
                     />
                     {errors.businessAddress && <span className="error-message">{errors.businessAddress}</span>}
-                </                    }
-div>
+                </div>
                 <div className="form-group">
                     <label htmlFor="panCardImage">PAN Card Image</label>
                     <input
@@ -234,8 +226,7 @@ div>
                         className={errors.panCardImage ? 'error' : ''}
                     />
                     {errors.panCardImage && <span className="error-message">{errors.panCardImage}</span>}
-                </                    }
-div>
+                </div>
                 <div className="form-group">
                     <label htmlFor="businessDocument">Document of Business</label>
                     <input
@@ -245,8 +236,7 @@ div>
                         className={errors.businessDocument ? 'error' : ''}
                     />
                     {errors.businessDocument && <span className="error-message">{errors.businessDocument}</span>}
-                </                    }
-div>
+                </div>
             </div>
           )}
           
@@ -262,7 +252,7 @@ div>
                 className={errors.password ? 'error' : ''}
               />
               {errors.password && <span className="error-message">{errors.password}</span>}
-            </div>              }
+            </div>
 
             
             <div className="form-group">
@@ -276,7 +266,7 @@ div>
                 className={errors.confirmPassword ? 'error' : ''}
               />
               {errors.confirmPassword && <span className="error-message">{errors.confirmPassword}</span>}
-            </div>              }
+            </div>
 
           </div>
           

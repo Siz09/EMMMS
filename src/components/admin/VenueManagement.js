@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { redirect, useNavigate, Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { venueService } from '../../services/api';
 import axios from 'axios';
 

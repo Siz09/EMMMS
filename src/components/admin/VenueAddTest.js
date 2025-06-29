@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { redirect, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { venueService } from '../../services/api';
 
 const VenueAddTest = () => {
@@ -16,7 +16,6 @@ const VenueAddTest = () => {
   });
 
   const [errors, setErrors] = useState({});
-  const [touched, setTouched] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [apiError, setApiError] = useState("");
 
@@ -42,16 +41,9 @@ const VenueAddTest = () => {
  const handleSubmit = async (e) => {
   e.preventDefault();
 
-  // Mark all fields as touched (optional, if you track this)
-  const allTouched = {};
-  Object.keys(formData).forEach((key) => {
-    allTouched[key] = true;
-  });
-  if (setTouched) setTouched(allTouched);
-
   if (validate()) {
-    if (setIsSubmitting) setIsSubmitting(true);
-    if (setApiError) setApiError("");
+    setIsSubmitting(true);
+    setApiError("");
 
     try {
       // Call your addVenue API method with formData
@@ -82,17 +74,17 @@ const VenueAddTest = () => {
 
       if (error.response) {
         if (error.response.status === 409) {
-          if (setApiError) setApiError("Venue with this name already exists.");
+          setApiError("Venue with this name already exists.");
         } else if (error.response.data && error.response.data.message) {
-          if (setApiError) setApiError(error.response.data.message);
+          setApiError(error.response.data.message);
         } else {
-          if (setApiError) setApiError("Venue add failed. Please try again later.");
+          setApiError("Venue add failed. Please try again later.");
         }
       } else {
-        if (setApiError) setApiError("Unable to connect to the server. Please try again later.");
+        setApiError("Unable to connect to the server. Please try again later.");
       }
     } finally {
-      if (setIsSubmitting) setIsSubmitting(false);
+      setIsSubmitting(false);
     }
   }
  };
@@ -111,7 +103,6 @@ const VenueAddTest = () => {
             onChange={handleChange}
           />
           {errors[field] && <span style={{ color: 'red' }}>{errors[field]}</span>}
-          }
         </div>
       ))}
       <button type="submit">Add Venue</button>
