@@ -114,9 +114,11 @@ if (businessDocInput) businessDocInput.value = null;
       </div>
       
       {apiError && <div className="alert alert-error">{apiError}</div>}
-      {successMessage && <div className="alert alert-success">{successMessage}</div>}
+      {successMess      }
+age && <div className="alert alert-success">{successMessage}</div>}
       
-      <div className="add-user-form-card">
+      <div       }
+className="add-user-form-card">
         <div className="form-header">
           <h2>User Information</h2>
           <p>Enter the details for the new user account</p>
@@ -148,7 +150,8 @@ if (businessDocInput) businessDocInput.value = null;
             />
             {errors.fullName && <span className="error-message">{errors.fullName}</span>}
           </div>
-          
+             }
+         
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
             <input
@@ -161,7 +164,8 @@ if (businessDocInput) businessDocInput.value = null;
             />
             {errors.email && <span className="error-message">{errors.email}</span>}
           </div>
-          
+             }
+         
           <div className="form-group">
             <label htmlFor="phone">Phone Number</label>
             <input
@@ -174,7 +178,8 @@ if (businessDocInput) businessDocInput.value = null;
             />
             {errors.phone && <span className="error-message">{errors.phone}</span>}
           </div>
-          
+             }
+         
           {userType === 'Partner' && (
             <div className="partner-info-section">
                 <div className="form-header">
@@ -192,7 +197,8 @@ if (businessDocInput) businessDocInput.value = null;
                         className={errors.businessName ? 'error' : ''}
                     />
                     {errors.businessName && <span className="error-message">{errors.businessName}</span>}
-                </div>
+                </                    }
+div>
                 <div className="form-group">
                     <label htmlFor="businessRegistrationNumber">Business Registration Number</label>
                     <input
@@ -204,7 +210,8 @@ if (businessDocInput) businessDocInput.value = null;
                         className={errors.businessRegistrationNumber ? 'error' : ''}
                     />
                     {errors.businessRegistrationNumber && <span className="error-message">{errors.businessRegistrationNumber}</span>}
-                </div>
+                </                    }
+div>
                 <div className="form-group">
                     <label htmlFor="businessAddress">Business Address</label>
                     <input
@@ -216,7 +223,8 @@ if (businessDocInput) businessDocInput.value = null;
                         className={errors.businessAddress ? 'error' : ''}
                     />
                     {errors.businessAddress && <span className="error-message">{errors.businessAddress}</span>}
-                </div>
+                </                    }
+div>
                 <div className="form-group">
                     <label htmlFor="panCardImage">PAN Card Image</label>
                     <input
@@ -226,7 +234,8 @@ if (businessDocInput) businessDocInput.value = null;
                         className={errors.panCardImage ? 'error' : ''}
                     />
                     {errors.panCardImage && <span className="error-message">{errors.panCardImage}</span>}
-                </div>
+                </                    }
+div>
                 <div className="form-group">
                     <label htmlFor="businessDocument">Document of Business</label>
                     <input
@@ -236,7 +245,8 @@ if (businessDocInput) businessDocInput.value = null;
                         className={errors.businessDocument ? 'error' : ''}
                     />
                     {errors.businessDocument && <span className="error-message">{errors.businessDocument}</span>}
-                </div>
+                </                    }
+div>
             </div>
           )}
           
@@ -252,7 +262,8 @@ if (businessDocInput) businessDocInput.value = null;
                 className={errors.password ? 'error' : ''}
               />
               {errors.password && <span className="error-message">{errors.password}</span>}
-            </div>
+            </div>              }
+
             
             <div className="form-group">
               <label htmlFor="confirmPassword">Confirm Password</label>
@@ -265,7 +276,8 @@ if (businessDocInput) businessDocInput.value = null;
                 className={errors.confirmPassword ? 'error' : ''}
               />
               {errors.confirmPassword && <span className="error-message">{errors.confirmPassword}</span>}
-            </div>
+            </div>              }
+
           </div>
           
           <div className="form-group-checkbox">
