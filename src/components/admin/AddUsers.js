@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { userService } from '../services/api'; // Import your API service
-import './AddUsers.css';
+import { userService } from '../../services/api'; // Import your API service
+import '../../styles/admin/AddUsers.css';
 
 const AddUsers = () => {
   const [userType, setUserType] = useState('Regular User');

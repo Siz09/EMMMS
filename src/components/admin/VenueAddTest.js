@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { redirect, useNavigate } from 'react-router-dom';
-import { venueService } from '../services/api';
+import { venueService } from '../../services/api';
 
 const VenueAddTest = () => {
 
@@ -96,7 +96,6 @@ const VenueAddTest = () => {
     }
   }
 };
-
 
   return (
     <form onSubmit={handleSubmit}>

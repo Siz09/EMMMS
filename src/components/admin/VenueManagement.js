@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { redirect, useNavigate, Navigate } from 'react-router-dom';
-import { venueService } from '../services/api';
+import { venueService } from '../../services/api';
 import axios from 'axios';
-
 
 const VenueManagement = () => {
     const [venues, setVenues] = useState([]);
@@ -51,7 +50,6 @@ const VenueManagement = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [menuOpenId]);
 
-
   const handleDelete = async (id) => {
   console.log("Deleting venue id:", id);
   try {
@@ -64,7 +62,6 @@ const VenueManagement = () => {
     alert("Failed to delete venue. Please try again.");
   }
 };
-
 
   const handleDeactivate = (id) => {
     setVenues((prev) => prev.map((venue) =>

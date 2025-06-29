@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './PartnerManagement.css';
-import { partnerService } from '../services/api';
+import '../../styles/admin/PartnerManagement.css';
+import { partnerService } from '../../services/api';
 
 const PartnerManagement = () => {
     const [partnersData, setPartnersData] = useState([]);
